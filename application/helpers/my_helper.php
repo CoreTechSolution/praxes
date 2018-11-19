@@ -75,3 +75,9 @@ function decripted($data){
 	$final_data = explode('|', $val);
 	return $final_data[1];
 }
+function is_login() {
+	$CI = & get_instance();
+	if (!$CI->session->userdata('isLoggedIn')) {
+		redirect(base_url('admin/login'));
+	}
+}
