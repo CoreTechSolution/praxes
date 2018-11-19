@@ -60,7 +60,7 @@
 						<div class="row">
 							<div class="col-lg-12">
 								<div class="form-group">
-									<input type="submit" name="submit" class="btn btn-primary" value="Login">
+									<input type="submit" name="submit" class="btn btn-sm btn-primary" value="Login">
 								</div>
 							</div>
 						</div>

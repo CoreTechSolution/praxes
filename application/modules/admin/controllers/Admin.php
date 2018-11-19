@@ -49,7 +49,16 @@ class Admin extends MY_Controller {
 	}
 	public function dashboard(){
 		is_login();
+		$data['html_title'] = 'Dashboard';
+		$data['page_title'] = 'Dashboard';
 		$data['content_view'] = 'admin/dashboard_view';
+		$this->load->view('admin/main_template_view', $data);
+	}
+	public function roles(){
+		is_login();
+		$data['html_title'] = 'Roles';
+		$data['page_title'] = 'Roles';
+		$data['content_view'] = 'admin/roles_view';
 		$this->load->view('admin/main_template_view', $data);
 	}
 }

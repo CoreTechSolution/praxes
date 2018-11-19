@@ -4,7 +4,6 @@ class Admin_model extends MY_Model {
 	function __construct() {
 		parent::__construct();
 	}
-
 	function loginMe($username, $password){
 		$this->db->select('id,username,email,password,user_role');
 		$this->db->from('users');

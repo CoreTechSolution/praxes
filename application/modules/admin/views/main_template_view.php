@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Admin | Dashboard</title>
+	<title>Admin | <?php echo $html_title; ?></title>
 	<!-- Tell the browser to be responsive to screen width -->
 	<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
 	<!-- Bootstrap 3.3.7 -->
@@ -46,10 +46,6 @@
 
 		<!-- Header Navbar: style can be found in header.less -->
 		<nav class="navbar navbar-static-top">
-			<!-- Sidebar toggle button-->
-			<a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
-				<span class="sr-only">Toggle navigation</span>
-			</a>
 			<!-- Navbar Right Menu -->
 			<div class="navbar-custom-menu">
 				<ul class="nav navbar-nav">
@@ -72,7 +68,7 @@
 									<a href="#" class="btn btn-default btn-flat">Profile</a>
 								</div>
 								<div class="pull-right">
-									<a href="#" class="btn btn-default btn-flat">Sign out</a>
+									<a href="<?php echo base_url('admin/logout'); ?>" class="btn btn-default btn-flat">Sign out</a>
 								</div>
 							</li>
 						</ul>
@@ -93,13 +89,23 @@
 				</div>
 				<div class="pull-left info">
 					<p>Admin</p>
-					<a href="#"><i class="fa fa-circle text-success"></i> Online</a>
+					<a href="javascript:void(0);"><i class="fa fa-circle text-success"></i> Online</a>
 				</div>
 			</div>
 			<!-- sidebar menu: : style can be found in sidebar.less -->
 			<ul class="sidebar-menu" data-widget="tree">
 				<li class="header">MAIN NAVIGATION</li>
-                <li class="active"><a href="index2.html"><i class="fa fa-dashboard"></i> Dashboard</a></li>
+                <li><a href="<?php echo base_url('admin/dashboard'); ?>"><i class="fa fa-dashboard"></i> Dashboard</a></li>
+                <li class="treeview">
+                    <a href="javascript:void(0);">
+                        <i class="fa fa-user" aria-hidden="true"></i>
+                        <span>Users</span>
+                    </a>
+                    <ul class="treeview-menu">
+                        <li><a href="<?php echo base_url('admin/manage-users'); ?>"><i class="fa fa-circle-o"></i> Manage Users</a></li>
+                        <li><a href="<?php echo base_url('admin/roles'); ?>"><i class="fa fa-circle-o"></i> Roles</a></li>
+                    </ul>
+                </li>
 			</ul>
 		</section>
 		<!-- /.sidebar -->
@@ -109,10 +115,10 @@
 	<div class="content-wrapper">
 		<!-- Content Header (Page header) -->
 		<section class="content-header">
-			<h1>Dashboard</h1>
+			<h1><?php echo $page_title; ?></h1>
 			<ol class="breadcrumb">
-				<li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-				<li class="active">Dashboard</li>
+				<li><a href="<?php echo base_url('admin/'); ?>"><i class="fa fa-dashboard"></i> Home</a></li>
+				<li class="active"><?php echo $page_title; ?></li>
 			</ol>
 		</section>
 		<!-- Main content -->
@@ -314,7 +320,6 @@
 	<!-- Add the sidebar's background. This div must be placed
 		 immediately after the control sidebar -->
 	<div class="control-sidebar-bg"></div>
-
 </div>
 <!-- ./wrapper -->
 
