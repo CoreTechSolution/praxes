@@ -7,7 +7,24 @@
 				<div class="box-header">
 					<h3 class="box-title">User Roles</h3>
 				</div>
-				<div class="box-body"></div>
+				<div class="box-body">
+					<?php if(!empty($roles)){ ?>
+						<table id="footable" class="table table-bordered table-hover">
+							<thead>
+								<tr>
+									<th>Role</th>
+									<th></th>
+								</tr>
+							</thead>
+						<?php foreach($roles as $role){ ?>
+							<tr>
+								<td><?php echo $role['role_name']; ?></td>
+								<td style="text-align: right;"><a href="<?php echo base_url('admin/delete-role/'); ?>?id=<?php echo $role['role_id']; ?>" style="color: red;"><i class="fa fa-trash-o" aria-hidden="true"></i></a></td>
+							</tr>
+						<?php } ?>
+						</table>
+					<?php } ?>
+				</div>
 			</div>
 		</div>
 	</div>

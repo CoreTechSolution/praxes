@@ -58,7 +58,64 @@ class Admin extends MY_Controller {
 		is_login();
 		$data['html_title'] = 'Roles';
 		$data['page_title'] = 'Roles';
+		$roles = $this->admin_model->get_roles();
+		$data['roles'] = $roles;
 		$data['content_view'] = 'admin/roles_view';
 		$this->load->view('admin/main_template_view', $data);
+	}
+	public function add_role(){
+		is_login();
+		$data['html_title'] = 'Add Role';
+		$data['page_title'] = 'Add Role';
+		$data['content_view'] = 'admin/add_role_view';
+		$this->load->view('admin/main_template_view', $data);
+	}
+	public function add_role_form(){
+		if($this->input->post('submit')){
+			$role_name = $this->input->post('role_name');
+			$role_slug = slugify($role_name);
+			$role_id = $this->admin_model->add_role($role_name, $role_slug);
+			if(!empty($role_id)){
+				redirect(base_url('admin/roles'));
+			}
+		}
+	}
+	public function delete_role(){
+		is_login();
+		$role_id = $this->input->get('id');
+		$this->admin_model->delete_role($role_id);
+		redirect('admin/roles');
+	}
+	public function companies(){
+		is_login();
+		$data['html_title'] = 'Companies';
+		$data['page_title'] = 'Companies';
+		$companies = $this->admin_model->get_companies();
+		$data['companies'] = $companies;
+		$data['content_view'] = 'admin/companies_view';
+		$this->load->view('admin/main_template_view', $data);
+	}
+	public function add_company(){
+		is_login();
+		$data['html_title'] = 'Add Company';
+		$data['page_title'] = 'Add Company';
+		$data['content_view'] = 'admin/add_company_view';
+		$this->load->view('admin/main_template_view', $data);
+	}
+	public function add_company_form(){
+		if($this->input->post('submit')){
+			$company_name = $this->input->post('company_name');
+			$company_slug = slugify($company_name);
+			$company_id = $this->admin_model->add_company($company_name, $company_slug);
+			if(!empty($company_id)){
+				redirect(base_url('admin/companies'));
+			}
+		}
+	}
+	public function delete_company(){
+		is_login();
+		$company_id = $this->input->get('id');
+		$this->admin_model->delete_company($company_id);
+		redirect('admin/companies');
 	}
 }
