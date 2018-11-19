@@ -67,4 +67,35 @@ class Admin_model extends MY_Model {
 		$this->db->where('company_id', $company_id);
 		$this->db->delete('companies');
 	}
+	function add_user($username, $email_address, $password, $first_name, $last_name, $phone, $license_numbers, $npi_number, $street_address, $city, $state, $zip_code, $user_role){
+		$data = array(
+			'username'          => $username,
+			'email'             => $email_address,
+			'password'          => $password,
+			'first_name'        => $first_name,
+			'last_name'         => $last_name,
+			'phone'             => $phone,
+			'license_numbers'   => $license_numbers,
+			'npi_number'        => $npi_number,
+			'street_address'    => $street_address,
+			'city'              => $city,
+			'state'             => $state,
+			'zip_code'          => $zip_code,
+			'user_role'         => $user_role,
+			'status'            => 1,
+		);
+		$this->db->insert('users',$data);
+		$user_id = $this->db->insert_id();
+		return $user_id;
+	}
+	function get_all_users(){
+		$this->db->select('*');
+		$this->db->from('users');
+
+		if($query = $this->db->get()) {
+			return $query->result_array();
+		} else {
+			return false;
+		}
+	}
 }

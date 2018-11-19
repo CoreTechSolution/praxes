@@ -118,4 +118,44 @@ class Admin extends MY_Controller {
 		$this->admin_model->delete_company($company_id);
 		redirect('admin/companies');
 	}
+	public function manage_users(){
+		is_login();
+		$data['html_title'] = 'Manage Users';
+		$data['page_title'] = 'Manage Users';
+		$users = $this->admin_model->get_all_users();
+		$data['users'] = $users;
+		$data['content_view'] = 'admin/manage_users_view';
+		$this->load->view('admin/main_template_view', $data);
+	}
+	public function add_user(){
+		is_login();
+		$data['html_title'] = 'Add User';
+		$data['page_title'] = 'Add User';
+		$roles = $this->admin_model->get_roles();
+		$data['roles'] = $roles;
+		$data['content_view'] = 'admin/add_user_view';
+		$this->load->view('admin/main_template_view', $data);
+	}
+	public function add_user_form(){
+		if($this->input->post('submit')){
+			$username = $this->input->post('username');
+			$email_address = $this->input->post('email_address');
+			$password = getHashedPassword($this->input->post('password'));
+			$first_name = $this->input->post('first_name');
+			$last_name = $this->input->post('last_name');
+			$phone = $this->input->post('phone');
+			$license_numbers = $this->input->post('license_numbers');
+			$npi_number = $this->input->post('npi_number');
+			$street_address = $this->input->post('street_address');
+			$city = $this->input->post('city');
+			$state = $this->input->post('state');
+			$zip_code = $this->input->post('zip_code');
+			$user_role = $this->input->post('user_role');
+
+			$user_id = $this->admin_model->add_user($username, $email_address, $password, $first_name, $last_name, $phone, $license_numbers, $npi_number, $street_address, $city, $state, $zip_code, $user_role);
+			if(!empty($user_id)){
+				redirect(base_url('admin/manage-users'));
+			}
+		}
+	}
 }
