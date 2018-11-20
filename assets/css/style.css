@@ -253,3 +253,22 @@ a.read_more {
 .footer_social_link li a:hover{
 
 }
+.wrapper1{
+    border-top: 1px solid #eeeeee;
+}
+.contentbox{
+    min-height: 300px;
+}
+.loginbox{
+    border: 1px solid #dddddd;
+    padding: 5px 20px;
+    margin: 50px 0;
+}
+#forms{
+
+}
+#forms label{
+    font-size: 17px;
+    margin-bottom: 0;
+    line-height: 100%;
+}
