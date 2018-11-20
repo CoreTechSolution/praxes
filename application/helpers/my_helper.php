@@ -81,3 +81,23 @@ function is_login() {
 		redirect(base_url('admin/login'));
 	}
 }
+function is_user_login() {
+	$CI = & get_instance();
+	if (!$CI->session->userdata('isLoggedIn')) {
+		redirect(base_url('home/login'));
+	}
+}
+function get_userdata_by_id($user_id){
+	$CI = & get_instance();
+	$CI->db->select('*');
+	$CI->db->from('users');
+	$CI->db->where('id', $user_id);
+
+	if($query=$CI->db->get())
+	{
+		return $query->row();
+	}
+	else{
+		return false;
+	}
+}

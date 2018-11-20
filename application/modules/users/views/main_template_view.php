@@ -54,14 +54,14 @@
 					<li class="dropdown user user-menu">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown">
 							<img src="<?php echo base_url('admin_assets/images/user2-160x160.jpg'); ?>" class="user-image" alt="User Image">
-							<span class="hidden-xs">Admin</span>
+							<span class="hidden-xs"><?php echo $username; ?></span>
 						</a>
 						<ul class="dropdown-menu">
 							<!-- User image -->
 							<li class="user-header">
 								<img src="<?php echo base_url('admin_assets/images/user2-160x160.jpg'); ?>" class="img-circle" alt="User Image">
 
-								<p>Alexander Pierce - Admin</p>
+								<p><?php echo $userdata->first_name.' '.$userdata->last_name; ?> - <?php echo $username; ?></p>
 							</li>
 							<!-- Menu Footer-->
 							<li class="user-footer">
@@ -69,7 +69,7 @@
 									<a href="#" class="btn btn-default btn-flat">Profile</a>
 								</div>
 								<div class="pull-right">
-									<a href="<?php echo base_url('admin/logout'); ?>" class="btn btn-default btn-flat">Sign out</a>
+									<a href="<?php echo base_url('users/logout'); ?>" class="btn btn-default btn-flat">Sign out</a>
 								</div>
 							</li>
 						</ul>
@@ -89,7 +89,7 @@
 					<img src="<?php echo base_url('admin_assets/images/user2-160x160.jpg'); ?>" class="img-circle" alt="User Image">
 				</div>
 				<div class="pull-left info">
-					<p>Admin</p>
+					<p><?php echo $username; ?></p>
 					<a href="javascript:void(0);"><i class="fa fa-circle text-success"></i> Online</a>
 				</div>
 			</div>
