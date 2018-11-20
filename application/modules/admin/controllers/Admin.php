@@ -51,6 +51,8 @@ class Admin extends MY_Controller {
 		is_login();
 		$data['html_title'] = 'Dashboard';
 		$data['page_title'] = 'Dashboard';
+		$user_id = $this->session->userdata('user_id');
+		$data['userdata'] = get_userdata_by_id($user_id);
 		$data['content_view'] = 'admin/dashboard_view';
 		$this->load->view('admin/main_template_view', $data);
 	}
