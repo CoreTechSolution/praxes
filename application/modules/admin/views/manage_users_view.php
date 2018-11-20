@@ -27,7 +27,7 @@
 									<td><?php echo $user['phone']; ?></td>
 									<td><?php echo $user['street_address'].', '.$user['city'].', '.$user['state'].', '.$user['zip_code']; ?></td>
 									<td><?php echo $user['user_role']; ?></td>
-									<td style="text-align: right;"><a href="<?php echo base_url('admin/delete-user/'); ?>?id=<?php echo $user['id']; ?>" style="color: red;"><i class="fa fa-trash-o" aria-hidden="true"></i></a></td>
+									<td style="text-align: right;"><a href="<?php echo base_url('admin/edit-user/'); ?>?id=<?php echo $user['id']; ?>" style="color: #3c8dbc;"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>&nbsp;&nbsp;<a href="<?php echo base_url('admin/delete-user/'); ?>?id=<?php echo $user['id']; ?>" style="color: red;"><i class="fa fa-trash-o" aria-hidden="true"></i></a></td>
 								</tr>
 							<?php } ?>
 						</table>

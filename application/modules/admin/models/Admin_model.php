@@ -91,11 +91,51 @@ class Admin_model extends MY_Model {
 	function get_all_users(){
 		$this->db->select('*');
 		$this->db->from('users');
+		$where = "id!=1";
+		$this->db->where($where);
 
 		if($query = $this->db->get()) {
 			return $query->result_array();
 		} else {
 			return false;
+		}
+	}
+	function delete_user($user_id){
+		$this->db->where('id', $user_id);
+		$this->db->delete('users');
+	}
+	function get_user_by_id($user_id){
+		$this->db->select('*');
+		$this->db->from('users');
+		$this->db->where('id', $user_id);
+
+		if($query = $this->db->get()) {
+			return $query->result_array();
+		} else {
+			return false;
+		}
+	}
+	function update_user($user_id, $password, $first_name, $last_name, $phone, $license_numbers, $npi_number, $street_address, $city, $state, $zip_code, $user_role){
+		$data = array(
+			'first_name'        => $first_name,
+			'last_name'         => $last_name,
+			'phone'             => $phone,
+			'license_numbers'   => $license_numbers,
+			'npi_number'        => $npi_number,
+			'street_address'    => $street_address,
+			'city'              => $city,
+			'state'             => $state,
+			'zip_code'          => $zip_code,
+			'user_role'         => $user_role,
+		);
+
+		$this->db->where('id', $user_id);
+		$this->db->update('users', $data);
+
+		if(!empty($password)){
+			$this->db->set('password', $password);
+			$this->db->where('id', $user_id);
+			$this->db->update('users');
 		}
 	}
 }

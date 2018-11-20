@@ -158,4 +158,44 @@ class Admin extends MY_Controller {
 			}
 		}
 	}
+	public function edit_user(){
+		is_login();
+		$data['html_title'] = 'Edit User';
+		$data['page_title'] = 'Edit User';
+		$roles = $this->admin_model->get_roles();
+		$data['roles'] = $roles;
+		$user_id = $this->input->get('id');
+		$user_data = $this->admin_model->get_user_by_id($user_id);
+		$data['user_data'] = $user_data;
+		$data['content_view'] = 'admin/edit_user_view';
+		$this->load->view('admin/main_template_view', $data);
+	}
+	public function edit_user_form(){
+		if($this->input->post('submit')){
+
+			$user_id = $this->input->post('user_id');
+			if(!empty($this->input->post('password'))){
+				$password = getHashedPassword($this->input->post('password'));
+			}
+			$first_name = $this->input->post('first_name');
+			$last_name = $this->input->post('last_name');
+			$phone = $this->input->post('phone');
+			$license_numbers = $this->input->post('license_numbers');
+			$npi_number = $this->input->post('npi_number');
+			$street_address = $this->input->post('street_address');
+			$city = $this->input->post('city');
+			$state = $this->input->post('state');
+			$zip_code = $this->input->post('zip_code');
+			$user_role = $this->input->post('user_role');
+
+			$this->admin_model->update_user($user_id, $password, $first_name, $last_name, $phone, $license_numbers, $npi_number, $street_address, $city, $state, $zip_code, $user_role);
+			redirect(base_url('admin/manage-users'));
+		}
+	}
+	public function delete_user(){
+		is_login();
+		$user_id = $this->input->get('id');
+		$this->admin_model->delete_user($user_id);
+		redirect(base_url('admin/manage-users'));
+	}
 }
