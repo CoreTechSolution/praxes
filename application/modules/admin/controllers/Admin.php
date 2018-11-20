@@ -23,13 +23,15 @@ class Admin extends MY_Controller {
 						'user_id'    => $res->id,
 						'user_role'  => $res->user_role,
 						'username'   => $res->username,
+						'first_name'   => $res->first_name,
+						'last_name'   => $res->last_name,
 						'isLoggedIn' => true
 					);
 					$this->session->set_userdata( $sessionArray );
 					if ( $res->user_role == 'admin' ) {
 						redirect( 'admin/dashboard' );
 					} else {
-						redirect( $res->user_role.'/dashboard' );
+						redirect( 'users/dashboard' );
 					}
 				}
 			} else {
@@ -51,8 +53,6 @@ class Admin extends MY_Controller {
 		is_login();
 		$data['html_title'] = 'Dashboard';
 		$data['page_title'] = 'Dashboard';
-		$user_id = $this->session->userdata('user_id');
-		$data['userdata'] = get_userdata_by_id($user_id);
 		$data['content_view'] = 'admin/dashboard_view';
 		$this->load->view('admin/main_template_view', $data);
 	}

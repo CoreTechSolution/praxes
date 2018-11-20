@@ -61,7 +61,7 @@
 							<li class="user-header">
 								<img src="<?php echo base_url('admin_assets/images/user2-160x160.jpg'); ?>" class="img-circle" alt="User Image">
 
-								<p><?php echo $userdata->first_name.' '.$userdata->last_name; ?> - Admin</p>
+								<p><?php echo $this->session->userdata('first_name').' '.$this->session->userdata('last_name'); ?> - Admin</p>
 							</li>
 							<!-- Menu Footer-->
 							<li class="user-footer">

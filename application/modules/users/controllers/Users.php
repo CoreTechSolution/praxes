@@ -14,9 +14,6 @@ class Users extends MY_Controller {
 		$data['html_title'] = 'Dashboard';
 		$data['page_title'] = 'Dashboard';
 		$data['username'] = $this->session->userdata('username');
-		$user_id = $this->session->userdata('user_id');
-		$data['user_role'] = $this->session->userdata('user_role');
-		$data['userdata'] = get_userdata_by_id($user_id);
 		$data['content_view'] = 'users/dashboard_view';
 		$this->load->view('users/main_template_view', $data);
 	}

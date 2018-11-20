@@ -5,7 +5,7 @@ class Home_model extends MY_Model {
 		parent::__construct();
 	}
 	function loginMe($username, $password){
-		$this->db->select('id,username,email,password,user_role');
+		$this->db->select('id,username,email,password,user_role,first_name,last_name');
 		$this->db->from('users');
 		$this->db->where('username', $username);
 
