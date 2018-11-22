@@ -30,7 +30,9 @@ class Users extends MY_Controller {
 		is_login();
 		$data['html_title'] = 'Manage Users';
 		$data['page_title'] = 'Manage Users';
-		$users = $this->admin_model->get_all_users();
+		$user_id = $this->session->userdata('user_id');
+		$company_id = $this->session->userdata('company_id');
+		$users = $this->admin_model->get_all_company_users($user_id, $company_id);
 		$data['users'] = $users;
 		$data['content_view'] = 'admin/manage_users_view';
 		$this->load->view('admin/main_template_view', $data);

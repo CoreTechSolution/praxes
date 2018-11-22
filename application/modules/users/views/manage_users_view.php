@@ -6,6 +6,7 @@
 			<div class="box">
 				<div class="box-header">
 					<h3 class="box-title">Manage Users</h3>
+					<?php print_r($users); ?>
 				</div>
 				<div class="box-body">
 					<?php if(!empty($users)){ ?>
