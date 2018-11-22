@@ -102,7 +102,7 @@
 									<select class="form-control" name="user_role">
 										<?php if(!empty($companies)){ ?>
 											<?php foreach($companies as $company){ ?>
-												<option value="<?php echo $company['role_slug']; ?>"><?php echo $company['role_name']; ?></option>
+												<option value="<?php echo $company['company_id']; ?>"><?php echo $company['company_name']; ?></option>
 											<?php } ?>
 										<?php } ?>
 									</select>
@@ -116,7 +116,7 @@
                                     <select class="form-control" name="user_role">
 										<?php if(!empty($roles)){ ?>
 											<?php foreach($roles as $role){ ?>
-                                                <option value="<?php echo $role['role_slug']; ?>"><?php echo $role['role_name']; ?></option>
+                                                <option value="<?php echo $role['role_id']; ?>"><?php echo $role['role_name']; ?></option>
 											<?php } ?>
 										<?php } ?>
                                     </select>
