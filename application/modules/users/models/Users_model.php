@@ -60,4 +60,19 @@ class Users_model extends MY_Model {
 		$user_id = $this->db->insert_id();
 		return $user_id;
 	}
+	function get_user_by_id($user_id){
+		$this->db->select('*');
+		$this->db->from('users');
+		$this->db->where('id', $user_id);
+
+		if($query = $this->db->get()) {
+			return $query->result_array();
+		} else {
+			return false;
+		}
+	}
+	function delete_user($user_id){
+		$this->db->where('id', $user_id);
+		$this->db->delete('users');
+	}
 }
