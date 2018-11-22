@@ -155,8 +155,9 @@ class Admin extends MY_Controller {
 			$state = $this->input->post('state');
 			$zip_code = $this->input->post('zip_code');
 			$user_role = $this->input->post('user_role');
+			$company_id = $this->input->post('company_id');
 
-			$user_id = $this->admin_model->add_user($username, $email_address, $password, $first_name, $last_name, $phone, $license_numbers, $npi_number, $street_address, $city, $state, $zip_code, $user_role);
+			$user_id = $this->admin_model->add_user($username, $email_address, $password, $first_name, $last_name, $phone, $license_numbers, $npi_number, $street_address, $city, $state, $zip_code, $user_role, $company_id);
 			if(!empty($user_id)){
 				redirect(base_url('admin/manage-users'));
 			}
@@ -191,8 +192,9 @@ class Admin extends MY_Controller {
 			$state = $this->input->post('state');
 			$zip_code = $this->input->post('zip_code');
 			$user_role = $this->input->post('user_role');
+			$company_id = $this->input->post('company_id');
 
-			$this->admin_model->update_user($user_id, $password, $first_name, $last_name, $phone, $license_numbers, $npi_number, $street_address, $city, $state, $zip_code, $user_role);
+			$this->admin_model->update_user($user_id, $password, $first_name, $last_name, $phone, $license_numbers, $npi_number, $street_address, $city, $state, $zip_code, $user_role, $company_id);
 			redirect(base_url('admin/manage-users'));
 		}
 	}

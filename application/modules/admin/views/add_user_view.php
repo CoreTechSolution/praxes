@@ -99,7 +99,7 @@
 							<div class="col-xs-6">
 								<div class="form-group">
 									<label>Company</label>
-									<select class="form-control" name="user_role">
+									<select class="form-control" name="company_id">
 										<?php if(!empty($companies)){ ?>
 											<?php foreach($companies as $company){ ?>
 												<option value="<?php echo $company['company_id']; ?>"><?php echo $company['company_name']; ?></option>

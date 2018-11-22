@@ -67,7 +67,16 @@ class Admin_model extends MY_Model {
 		$this->db->where('company_id', $company_id);
 		$this->db->delete('companies');
 	}
-	function add_user($username, $email_address, $password, $first_name, $last_name, $phone, $license_numbers, $npi_number, $street_address, $city, $state, $zip_code, $user_role){
+	function add_user($username, $email_address, $password, $first_name, $last_name, $phone, $license_numbers, $npi_number, $street_address, $city, $state, $zip_code, $user_role, $company_id){
+		$this->db->select('company_name');
+		$this->db->from('companies');
+		$this->db->where('company_id', $company_id);
+		if($query = $this->db->get()){
+			foreach ($query->result() as $row){
+				$company_name = $row->company_name;
+			}
+		}
+
 		$data = array(
 			'username'          => $username,
 			'email'             => $email_address,
@@ -82,6 +91,8 @@ class Admin_model extends MY_Model {
 			'state'             => $state,
 			'zip_code'          => $zip_code,
 			'user_role'         => $user_role,
+			'company_id'         => $company_id,
+			'company_name'         => $company_name,
 			'status'            => 1,
 		);
 		$this->db->insert('users',$data);
@@ -115,7 +126,16 @@ class Admin_model extends MY_Model {
 			return false;
 		}
 	}
-	function update_user($user_id, $password, $first_name, $last_name, $phone, $license_numbers, $npi_number, $street_address, $city, $state, $zip_code, $user_role){
+	function update_user($user_id, $password, $first_name, $last_name, $phone, $license_numbers, $npi_number, $street_address, $city, $state, $zip_code, $user_role, $company_id){
+		$this->db->select('company_name');
+		$this->db->from('companies');
+		$this->db->where('company_id', $company_id);
+		if($query = $this->db->get()){
+			foreach ($query->result() as $row){
+				$company_name = $row->company_name;
+			}
+		}
+
 		$data = array(
 			'first_name'        => $first_name,
 			'last_name'         => $last_name,
@@ -127,6 +147,8 @@ class Admin_model extends MY_Model {
 			'state'             => $state,
 			'zip_code'          => $zip_code,
 			'user_role'         => $user_role,
+			'company_id'        => $company_id,
+			'company_name'      => $company_name,
 		);
 
 		$this->db->where('id', $user_id);

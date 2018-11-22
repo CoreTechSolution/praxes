@@ -96,20 +96,35 @@
 									<input type="text" name="zip_code" class="form-control" value="<?php echo $user_data[0]['zip_code']; ?>">
 								</div>
 							</div>
-							<div class="col-xs-6">
-								<div class="form-group">
-									<label>User Role</label>
-									<select class="form-control" name="user_role">
-										<?php $role_slug = $user_data[0]['user_role']; ?>
-										<?php if(!empty($roles)){ ?>
-											<?php foreach($roles as $role){ ?>
-												<option value="<?php echo $role['role_slug']; ?>" <?php if($role_slug == $role['role_slug']){ echo 'selected="selected"'; } ?>><?php echo $role['role_name']; ?></option>
+                            <div class="col-xs-6">
+                                <div class="form-group">
+                                    <label>Company</label>
+                                    <select class="form-control" name="company_id">
+										<?php if(!empty($companies)){ ?>
+											<?php foreach($companies as $company){ ?>
+                                                <option value="<?php echo $company['company_id']; ?>"><?php echo $company['company_name']; ?></option>
 											<?php } ?>
 										<?php } ?>
-									</select>
-								</div>
-							</div>
+                                    </select>
+                                </div>
+                            </div>
 						</div>
+                        <div class="row">
+                            <div class="col-xs-6">
+                                <div class="form-group">
+                                    <label>User Role</label>
+                                    <select class="form-control" name="user_role">
+				                        <?php $role_slug = $user_data[0]['user_role']; ?>
+				                        <?php if(!empty($roles)){ ?>
+					                        <?php foreach($roles as $role){ ?>
+                                                <option value="<?php echo $role['role_slug']; ?>" <?php if($role_slug == $role['role_slug']){ echo 'selected="selected"'; } ?>><?php echo $role['role_name']; ?></option>
+					                        <?php } ?>
+				                        <?php } ?>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-xs-6"></div>
+                        </div>
 						<div class="row">
 							<div class="col-xs-12">
 								<div class="form-group">
