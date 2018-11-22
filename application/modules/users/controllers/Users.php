@@ -68,7 +68,7 @@ class Users extends MY_Controller {
 			$company_id = $this->input->post('company_id');
 			$data['username'] = $this->session->userdata('username');
 
-			$user_id = $this->admin_model->add_user($username, $email_address, $password, $first_name, $last_name, $phone, $license_numbers, $npi_number, $street_address, $city, $state, $zip_code, $user_role, $company_id);
+			$user_id = $this->users_model->add_user($username, $email_address, $password, $first_name, $last_name, $phone, $license_numbers, $npi_number, $street_address, $city, $state, $zip_code, $user_role, $company_id);
 			if(!empty($user_id)){
 				redirect(base_url('users/manage-staff'));
 			}
