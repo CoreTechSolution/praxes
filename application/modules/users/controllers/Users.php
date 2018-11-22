@@ -31,6 +31,7 @@ class Users extends MY_Controller {
 		$data['html_title'] = 'Manage Staff';
 		$data['page_title'] = 'Manage Staff';
 		$user_id = $this->session->userdata('user_id');
+		$data['username'] = $this->session->userdata('username');
 		$company_id = $this->session->userdata('company_id');
 		$users = $this->users_model->get_all_company_users($user_id, $company_id);
 		$data['users'] = $users;
