@@ -8,7 +8,7 @@ class Users_model extends MY_Model {
 		//$user_id = $this->session->userdata('user_id');
 		$this->db->select('*');
 		$this->db->from('users');
-		$where = "id!=1";
+		$where = "id!=1 AND id!=$user_id";
 		$this->db->where($where);
 
 		if($query = $this->db->get()) {
