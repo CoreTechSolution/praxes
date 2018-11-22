@@ -4,4 +4,17 @@ class Users_model extends MY_Model {
 	function __construct() {
 		parent::__construct();
 	}
+	function get_all_users(){
+		$user_id = $this->session->userdata('user_id');
+		$this->db->select('*');
+		$this->db->from('users');
+		$where = "id!=1 AND id!=$user_id AND company_id==";
+		$this->db->where($where);
+
+		if($query = $this->db->get()) {
+			return $query->result_array();
+		} else {
+			return false;
+		}
+	}
 }

@@ -26,4 +26,13 @@ class Users extends MY_Controller {
 		$CI->session->sess_destroy();
 		redirect(base_url('login'));
 	}
+	public function manage_users(){
+		is_login();
+		$data['html_title'] = 'Manage Users';
+		$data['page_title'] = 'Manage Users';
+		$users = $this->admin_model->get_all_users();
+		$data['users'] = $users;
+		$data['content_view'] = 'admin/manage_users_view';
+		$this->load->view('admin/main_template_view', $data);
+	}
 }

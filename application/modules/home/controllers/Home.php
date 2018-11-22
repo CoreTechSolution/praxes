@@ -26,6 +26,7 @@ class Home extends MY_Controller {
 						'username'   => $res->username,
 						'first_name'   => $res->first_name,
 						'last_name'   => $res->last_name,
+						'company_id'   => $res->company_id,
 						'isLoggedIn' => true
 					);
 					$this->session->set_userdata( $sessionArray );
