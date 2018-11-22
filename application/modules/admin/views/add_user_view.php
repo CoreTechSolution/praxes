@@ -98,17 +98,32 @@
 							</div>
 							<div class="col-xs-6">
 								<div class="form-group">
-									<label>User Role</label>
+									<label>Company</label>
 									<select class="form-control" name="user_role">
-										<?php if(!empty($roles)){ ?>
-											<?php foreach($roles as $role){ ?>
-												<option value="<?php echo $role['role_slug']; ?>"><?php echo $role['role_name']; ?></option>
+										<?php if(!empty($companies)){ ?>
+											<?php foreach($companies as $company){ ?>
+												<option value="<?php echo $company['role_slug']; ?>"><?php echo $company['role_name']; ?></option>
 											<?php } ?>
 										<?php } ?>
 									</select>
 								</div>
 							</div>
 						</div>
+                        <div class="row">
+                            <div class="col-xs-6">
+                                <div class="form-group">
+                                    <label>User Role</label>
+                                    <select class="form-control" name="user_role">
+										<?php if(!empty($roles)){ ?>
+											<?php foreach($roles as $role){ ?>
+                                                <option value="<?php echo $role['role_slug']; ?>"><?php echo $role['role_name']; ?></option>
+											<?php } ?>
+										<?php } ?>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-xs-6"></div>
+                        </div>
 						<div class="row">
 							<div class="col-xs-12">
 								<div class="form-group">

@@ -135,6 +135,8 @@ class Admin extends MY_Controller {
 		$data['page_title'] = 'Add User';
 		$roles = $this->admin_model->get_roles();
 		$data['roles'] = $roles;
+		$companies = $this->admin_model->get_companies();
+		$data['companies'] = $companies;
 		$data['content_view'] = 'admin/add_user_view';
 		$this->load->view('admin/main_template_view', $data);
 	}
