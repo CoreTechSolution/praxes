@@ -96,20 +96,6 @@
 									<input type="text" name="zip_code" class="form-control">
 								</div>
 							</div>
-							<div class="col-xs-6">
-								<div class="form-group">
-									<label>Company</label>
-									<select class="form-control" name="company_id">
-										<?php if(!empty($companies)){ ?>
-											<?php foreach($companies as $company){ ?>
-												<option value="<?php echo $company['company_id']; ?>"><?php echo $company['company_name']; ?></option>
-											<?php } ?>
-										<?php } ?>
-									</select>
-								</div>
-							</div>
-						</div>
-                        <div class="row">
                             <div class="col-xs-6">
                                 <div class="form-group">
                                     <label>User Role</label>
@@ -122,11 +108,11 @@
                                     </select>
                                 </div>
                             </div>
-                            <div class="col-xs-6"></div>
-                        </div>
+						</div>
 						<div class="row">
 							<div class="col-xs-12">
 								<div class="form-group">
+                                    <input type="hidden" name="company_id" value="<?php echo $company_id; ?>">
 									<input type="submit" name="submit" value="Add User" class="btn btn-primary" style="margin-top: 24px;">
 								</div>
 							</div>
