@@ -117,27 +117,4 @@ class Users extends MY_Controller {
 		$this->users_model->delete_user($user_id);
 		redirect(base_url('users/manage-staff'));
 	}
-	function update_user($user_id, $password, $first_name, $last_name, $phone, $license_numbers, $npi_number, $street_address, $city, $state, $zip_code, $user_role){
-		$data = array(
-			'first_name'        => $first_name,
-			'last_name'         => $last_name,
-			'phone'             => $phone,
-			'license_numbers'   => $license_numbers,
-			'npi_number'        => $npi_number,
-			'street_address'    => $street_address,
-			'city'              => $city,
-			'state'             => $state,
-			'zip_code'          => $zip_code,
-			'user_role'         => $user_role,
-		);
-
-		$this->db->where('id', $user_id);
-		$this->db->update('users', $data);
-
-		if(!empty($password)){
-			$this->db->set('password', $password);
-			$this->db->where('id', $user_id);
-			$this->db->update('users');
-		}
-	}
 }
