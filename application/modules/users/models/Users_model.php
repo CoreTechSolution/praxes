@@ -5,10 +5,10 @@ class Users_model extends MY_Model {
 		parent::__construct();
 	}
 	function get_all_users(){
-		$user_id = $this->session->userdata('user_id');
+		//$user_id = $this->session->userdata('user_id');
 		$this->db->select('*');
 		$this->db->from('users');
-		$where = "id!=1 AND id!=$user_id AND company_id==";
+		$where = "id!=1";
 		$this->db->where($where);
 
 		if($query = $this->db->get()) {
