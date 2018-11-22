@@ -101,3 +101,14 @@ function get_userdata_by_id($user_id){
 		return false;
 	}
 }
+function get_role_name_by_id($role_id){
+	$CI = & get_instance();
+	$CI->db->select('*');
+	$CI->db->from('roles');
+	$CI->db->where('role_id', $role_id);
+	if($query=$CI->db->get()){
+		foreach($query as $q){
+			return $q->role_name;
+		}
+	}
+}
