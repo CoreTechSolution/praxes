@@ -26,10 +26,10 @@ class Users extends MY_Controller {
 		$CI->session->sess_destroy();
 		redirect(base_url('login'));
 	}
-	public function manage_users(){
+	public function manage_staff(){
 		is_login();
-		$data['html_title'] = 'Manage Users';
-		$data['page_title'] = 'Manage Users';
+		$data['html_title'] = 'Manage Staff';
+		$data['page_title'] = 'Manage Staff';
 		$user_id = $this->session->userdata('user_id');
 		$company_id = $this->session->userdata('company_id');
 		$users = $this->users_model->get_all_company_users($user_id, $company_id);
