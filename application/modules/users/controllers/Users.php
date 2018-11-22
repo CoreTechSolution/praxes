@@ -44,6 +44,7 @@ class Users extends MY_Controller {
 		$data['page_title'] = 'Add User';
 		$roles = $this->users_model->get_roles();
 		$data['roles'] = $roles;
+		$data['username'] = $this->session->userdata('username');
 		$company_id = $this->session->userdata('company_id');
 		$data['company_id'] = $company_id;
 		$data['content_view'] = 'users/add_user_view';
