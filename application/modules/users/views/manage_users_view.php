@@ -2,7 +2,7 @@
 <section class="content">
 	<div class="row">
 		<div class="col-xs-12">
-			<div style="text-align: right; margin-bottom: 10px;"><a href="<?php echo base_url('admin/add-user'); ?>" class="btn btn-primary">Add User</a></div>
+			<div style="text-align: right; margin-bottom: 10px;"><a href="<?php echo base_url('users/add-user'); ?>" class="btn btn-primary">Add User</a></div>
 			<div class="box">
 				<div class="box-header">
 					<h3 class="box-title">Manage Users</h3>
@@ -27,7 +27,7 @@
 									<td><?php echo $user['phone']; ?></td>
 									<td><?php echo $user['street_address'].', '.$user['city'].', '.$user['state'].', '.$user['zip_code']; ?></td>
 									<td><?php echo get_role_name_by_id($user['user_role']); ?></td>
-									<td style="text-align: right;"><a href="<?php echo base_url('admin/edit-user/'); ?>?id=<?php echo $user['id']; ?>" style="color: #3c8dbc;"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>&nbsp;&nbsp;<a href="<?php echo base_url('admin/delete-user/'); ?>?id=<?php echo $user['id']; ?>" style="color: red;"><i class="fa fa-trash-o" aria-hidden="true"></i></a></td>
+									<td style="text-align: right;"><a href="<?php echo base_url('users/edit-user/'); ?>?id=<?php echo $user['id']; ?>" style="color: #3c8dbc;"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>&nbsp;&nbsp;<a href="<?php echo base_url('users/delete-user/'); ?>?id=<?php echo $user['id']; ?>" style="color: red;"><i class="fa fa-trash-o" aria-hidden="true"></i></a></td>
 								</tr>
 							<?php } ?>
 						</table>
