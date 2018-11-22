@@ -8,11 +8,12 @@ class Users_model extends MY_Model {
 		//$user_id = $this->session->userdata('user_id');
 		$this->db->select('*');
 		$this->db->from('users');
-		$where = "id NOT IN (1, $user_id) AND company_id IN ($company_id)";
+		$where = "id NOT IN (1, $user_id)";
 		$this->db->where($where);
 
 		if($query = $this->db->get()) {
-			return $query->result_array();
+			//return $query->result_array();
+			return $company_id;
 		} else {
 			return false;
 		}
