@@ -8,7 +8,7 @@ class Users_model extends MY_Model {
 		//$user_id = $this->session->userdata('user_id');
 		$this->db->select('*');
 		$this->db->from('users');
-		$where = "id NOT IN (1, $user_id) AND company_id==$company_id";
+		$where = "id NOT IN (1, $user_id) AND company_id=$company_id";
 		$this->db->where($where);
 
 		if($query = $this->db->get()) {
