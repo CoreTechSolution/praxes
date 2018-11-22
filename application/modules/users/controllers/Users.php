@@ -50,4 +50,28 @@ class Users extends MY_Controller {
 		$data['content_view'] = 'users/add_user_view';
 		$this->load->view('users/main_template_view', $data);
 	}
+	public function add_user_form(){
+		if($this->input->post('submit')){
+			$username = $this->input->post('username');
+			$email_address = $this->input->post('email_address');
+			$password = getHashedPassword($this->input->post('password'));
+			$first_name = $this->input->post('first_name');
+			$last_name = $this->input->post('last_name');
+			$phone = $this->input->post('phone');
+			$license_numbers = $this->input->post('license_numbers');
+			$npi_number = $this->input->post('npi_number');
+			$street_address = $this->input->post('street_address');
+			$city = $this->input->post('city');
+			$state = $this->input->post('state');
+			$zip_code = $this->input->post('zip_code');
+			$user_role = $this->input->post('user_role');
+			$company_id = $this->input->post('company_id');
+			$data['username'] = $this->session->userdata('username');
+
+			$user_id = $this->admin_model->add_user($username, $email_address, $password, $first_name, $last_name, $phone, $license_numbers, $npi_number, $street_address, $city, $state, $zip_code, $user_role, $company_id);
+			if(!empty($user_id)){
+				redirect(base_url('users/manage-staff'));
+			}
+		}
+	}
 }
