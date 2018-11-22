@@ -172,6 +172,8 @@ class Admin extends MY_Controller {
 		$user_id = $this->input->get('id');
 		$user_data = $this->admin_model->get_user_by_id($user_id);
 		$data['user_data'] = $user_data;
+		$companies = $this->admin_model->get_companies();
+		$data['companies'] = $companies;
 		$data['content_view'] = 'admin/edit_user_view';
 		$this->load->view('admin/main_template_view', $data);
 	}

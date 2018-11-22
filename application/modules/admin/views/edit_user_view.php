@@ -100,9 +100,10 @@
                                 <div class="form-group">
                                     <label>Company</label>
                                     <select class="form-control" name="company_id">
+	                                    <?php $company_id = $user_data[0]['company_id']; ?>
 										<?php if(!empty($companies)){ ?>
 											<?php foreach($companies as $company){ ?>
-                                                <option value="<?php echo $company['company_id']; ?>"><?php echo $company['company_name']; ?></option>
+                                                <option value="<?php echo $company['company_id']; ?>" <?php if($company_id == $company['company_id']){ echo 'selected="selected"'; } ?>><?php echo $company['company_name']; ?></option>
 											<?php } ?>
 										<?php } ?>
                                     </select>
@@ -114,10 +115,10 @@
                                 <div class="form-group">
                                     <label>User Role</label>
                                     <select class="form-control" name="user_role">
-				                        <?php $role_slug = $user_data[0]['user_role']; ?>
+				                        <?php $role_id = $user_data[0]['user_role']; ?>
 				                        <?php if(!empty($roles)){ ?>
 					                        <?php foreach($roles as $role){ ?>
-                                                <option value="<?php echo $role['role_slug']; ?>" <?php if($role_slug == $role['role_slug']){ echo 'selected="selected"'; } ?>><?php echo $role['role_name']; ?></option>
+                                                <option value="<?php echo $role['role_id']; ?>" <?php if($role_id == $role['role_id']){ echo 'selected="selected"'; } ?>><?php echo $role['role_name']; ?></option>
 					                        <?php } ?>
 				                        <?php } ?>
                                     </select>
