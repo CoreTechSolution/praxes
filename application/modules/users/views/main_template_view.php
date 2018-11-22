@@ -97,6 +97,7 @@
 			<ul class="sidebar-menu" data-widget="tree">
 				<li class="header">MAIN NAVIGATION</li>
                 <li><a href="<?php echo base_url('users/dashboard'); ?>"><i class="fa fa-dashboard"></i> Dashboard</a></li>
+                <li><a href="<?php echo base_url('users/manage-users'); ?>"><i class="fa fa-dashboard"></i> Manage Users</a></li>
 			</ul>
 		</section>
 		<!-- /.sidebar -->
