@@ -7,7 +7,8 @@ class Users_model extends MY_Model {
 	function get_all_company_users($user_id, $company_id){
 		$this->db->select('*');
 		$this->db->from('users');
-		$where = "id NOT IN (1, $user_id)";
+		//$where = "id NOT IN (1, $user_id)";
+		$where = "id NOT IN (1, $user_id) AND company_id IN ($company_id)";
 		$this->db->where($where);
 
 		if($query = $this->db->get()) {
