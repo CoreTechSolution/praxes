@@ -63,3 +63,6 @@ $route['admin/add-user'] = 'admin/add_user';
 $route['admin/delete-user'] = 'admin/delete_user';
 $route['admin/edit-user'] = 'admin/edit_user';
 $route['users/manage-staff'] = 'users/manage_staff';
+$route['users/add-user'] = 'users/add_user';
+$route['users/delete-user'] = 'users/delete_user';
+$route['users/edit-user'] = 'users/edit_user';

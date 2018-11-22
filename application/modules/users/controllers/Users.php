@@ -38,4 +38,15 @@ class Users extends MY_Controller {
 		$data['content_view'] = 'users/manage_users_view';
 		$this->load->view('users/main_template_view', $data);
 	}
+	public function add_user(){
+		is_login();
+		$data['html_title'] = 'Add User';
+		$data['page_title'] = 'Add User';
+		$roles = $this->users_model->get_roles();
+		$data['roles'] = $roles;
+		$company_id = $this->session->userdata('company_id');
+		$data['company_id'] = $company_id;
+		$data['content_view'] = 'users/add_user_view';
+		$this->load->view('users/main_template_view', $data);
+	}
 }

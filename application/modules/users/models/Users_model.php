@@ -18,4 +18,14 @@ class Users_model extends MY_Model {
 			return false;
 		}
 	}
+	function get_roles(){
+		$this->db->select('*');
+		$this->db->from('roles');
+
+		if($query = $this->db->get()) {
+			return $query->result_array();
+		} else {
+			return false;
+		}
+	}
 }
