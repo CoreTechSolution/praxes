@@ -44,6 +44,15 @@ class Admin_model extends MY_Model {
 		$this->db->where('role_id', $role_id);
 		$this->db->delete('roles');
 	}
+	function update_role($role_id, $role_name, $role_slug){
+		$data = array(
+			'role_name'        => $role_name,
+			'role_slug'         => $role_slug,
+		);
+
+		$this->db->where('role_id', $role_id);
+		$this->db->update('roles', $data);
+	}
 	function get_companies(){
 		$this->db->select('*');
 		$this->db->from('companies');

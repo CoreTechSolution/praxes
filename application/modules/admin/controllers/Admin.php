@@ -82,6 +82,26 @@ class Admin extends MY_Controller {
 			}
 		}
 	}
+	public function edit_role(){
+		is_login();
+		$role_id = $this->input->get('id');
+		$role_name = get_role_name_by_id($role_id);
+		$data['html_title'] = 'Edit Role';
+		$data['page_title'] = 'Edit Role';
+		$data['role_id'] = $role_id;
+		$data['role_name'] = $role_name;
+		$data['content_view'] = 'admin/edit_role_view';
+		$this->load->view('admin/main_template_view', $data);
+	}
+	public function edit_role_form(){
+		if($this->input->post('submit')){
+			$role_name = $this->input->post('role_name');
+			$role_id = $this->input->post('role_id');
+			$role_slug = slugify($role_name);
+			$role_id = $this->admin_model->update_role($role_id, $role_name, $role_slug);
+			redirect(base_url('admin/roles'));
+		}
+	}
 	public function delete_role(){
 		is_login();
 		$role_id = $this->input->get('id');
