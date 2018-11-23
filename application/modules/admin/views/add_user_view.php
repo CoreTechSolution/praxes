@@ -4,7 +4,7 @@
 		<div class="col-xs-12">
 			<div class="box">
 				<div class="box-body">
-					<form id="add_user_form" method="post" action="admin/add_user_form">
+					<form id="add_user_form" method="post" action="admin/add_user_form" class="formclass">
 						<div class="row">
 							<div class="col-xs-6">
 								<div class="form-group">
