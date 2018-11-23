@@ -152,13 +152,16 @@
 <script src="<?php echo base_url('admin_assets/js/jquery-jvectormap-world-mill-en.js'); ?>"></script>
 <!-- SlimScroll -->
 <script src="<?php echo base_url('admin_assets/js/jquery.slimscroll.min.js'); ?>"></script>
+<script src="<?php echo base_url('admin_assets/js/footable.min.js'); ?>"></script>
 <!-- ChartJS -->
 <!--<script src="<?php /*echo base_url('admin_assets/js/Chart.js'); */?>"></script>-->
-<script src="<?php echo base_url('admin_assets/js/footable.min.js'); ?>"></script>
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-<script src="<?php echo base_url('admin_assets/js/dashboard2.js'); ?>"></script>
+<!--<script src="<?php /*echo base_url('admin_assets/js/dashboard2.js'); */?>"></script>-->
 <!-- AdminLTE for demo purposes -->
-<script src="<?php echo base_url('admin_assets/js/demo.js'); ?>"></script>
+<!-- <script src="<?php /*echo base_url('admin_assets/js/demo.js'); */?>"></script>-->
+<script src="<?php echo base_url('admin_assets/js/jquery.validate.min.js'); ?>"></script>
+<script src="<?php echo base_url('admin_assets/js/additional-methods.js'); ?>"></script>
+<script src="<?php echo base_url('admin_assets/js/praxes.js'); ?>"></script>
 <!--<script>
     jQuery(document).ready(function(){
         jQuery('#footable').footable();

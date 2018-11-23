@@ -4,17 +4,17 @@
 		<div class="col-xs-12">
 			<div class="box">
 				<div class="box-body">
-					<form id="forms" method="post" action="admin/add_user_form">
+					<form id="add_user_form" method="post" action="admin/add_user_form">
 						<div class="row">
 							<div class="col-xs-6">
 								<div class="form-group">
-									<label>Username</label>
+									<label>Username <span>*</span></label>
 									<input type="text" name="username" class="form-control">
 								</div>
 							</div>
 							<div class="col-xs-6">
 								<div class="form-group">
-									<label>Email Address</label>
+									<label>Email Address <span>*</span></label>
 									<input type="text" name="email_address" class="form-control">
 								</div>
 							</div>
@@ -22,13 +22,13 @@
 						<div class="row">
 							<div class="col-xs-6">
 								<div class="form-group">
-									<label>Password</label>
-									<input type="password" name="password" class="form-control">
+									<label>Password <span>*</span></label>
+									<input id="password" type="password" name="password" class="form-control">
 								</div>
 							</div>
 							<div class="col-xs-6">
 								<div class="form-group">
-									<label>Confirm Password</label>
+									<label>Confirm Password <span>*</span></label>
 									<input type="password" name="confirm_password" class="form-control">
 								</div>
 							</div>
@@ -36,13 +36,13 @@
 						<div class="row">
 							<div class="col-xs-6">
 								<div class="form-group">
-									<label>First Name</label>
+									<label>First Name <span>*</span></label>
 									<input type="text" name="first_name" class="form-control">
 								</div>
 							</div>
 							<div class="col-xs-6">
 								<div class="form-group">
-									<label>Last Name</label>
+									<label>Last Name <span>*</span></label>
 									<input type="text" name="last_name" class="form-control">
 								</div>
 							</div>
@@ -56,7 +56,7 @@
 							</div>
 							<div class="col-xs-6">
 								<div class="form-group">
-									<label>License Numbers</label>
+									<label>License Numbers <span>*</span></label>
 									<input type="text" name="license_numbers" class="form-control">
 								</div>
 							</div>
@@ -64,13 +64,13 @@
 						<div class="row">
 							<div class="col-xs-6">
 								<div class="form-group">
-									<label>NPI Number</label>
+									<label>NPI Number <span>*</span></label>
 									<input type="text" name="npi_number" class="form-control">
 								</div>
 							</div>
 							<div class="col-xs-6">
 								<div class="form-group">
-									<label>Street Address</label>
+									<label>Street Address <span>*</span></label>
 									<input type="text" name="street_address" class="form-control">
 								</div>
 							</div>
@@ -78,13 +78,13 @@
 						<div class="row">
 							<div class="col-xs-6">
 								<div class="form-group">
-									<label>City</label>
+									<label>City <span>*</span></label>
 									<input type="text" name="city" class="form-control">
 								</div>
 							</div>
 							<div class="col-xs-6">
 								<div class="form-group">
-									<label>State</label>
+									<label>State <span>*</span></label>
 									<input type="text" name="state" class="form-control">
 								</div>
 							</div>
@@ -92,13 +92,13 @@
 						<div class="row">
 							<div class="col-xs-6">
 								<div class="form-group">
-									<label>ZIP code</label>
+									<label>ZIP code <span>*</span></label>
 									<input type="text" name="zip_code" class="form-control">
 								</div>
 							</div>
 							<div class="col-xs-6">
 								<div class="form-group">
-									<label>Company</label>
+									<label>Company <span>*</span></label>
 									<select class="form-control" name="company_id">
 										<?php if(!empty($companies)){ ?>
 											<?php foreach($companies as $company){ ?>
@@ -112,7 +112,7 @@
                         <div class="row">
                             <div class="col-xs-6">
                                 <div class="form-group">
-                                    <label>User Role</label>
+                                    <label>User Role <span>*</span></label>
                                     <select class="form-control" name="user_role">
 										<?php if(!empty($roles)){ ?>
 											<?php foreach($roles as $role){ ?>
