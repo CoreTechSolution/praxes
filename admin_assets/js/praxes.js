@@ -104,5 +104,25 @@ jQuery(document).ready(function(){
         messages: {
 
         }
-    })
+    });
+    jQuery('#add_role_form').validate({
+        rules: {
+            role_name: {
+                required: true
+            },
+        },
+        messages: {
+
+        }
+    });
+    jQuery('#add_company_form').validate({
+        rules: {
+            company_name: {
+                required: true
+            },
+        },
+        messages: {
+
+        }
+    });
 });
