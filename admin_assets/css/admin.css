@@ -6,3 +6,11 @@
     background-color: #ecf0f5;
     padding: 20px;
 }
+.box .box-body form label span{
+    color: red;
+}
+.box .box-body form label.error{
+    color: red;
+    font-weight: 400;
+    font-style: italic;
+}
