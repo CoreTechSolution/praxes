@@ -4,7 +4,7 @@
 		<div class="col-xs-12">
 			<div class="box">
 				<div class="box-body">
-					<form id="add_role_form" method="post" action="admin/edit_role_form" class="formclass">
+					<form id="add_role_form" method="post" action="<?php echo base_url('admin/edit_role_form'); ?>" class="formclass">
 						<div class="row">
 							<div class="col-xs-10">
 								<div class="form-group">
@@ -14,7 +14,7 @@
 							</div>
 							<div class="col-xs-2">
 								<input type="hidden" name="role_id" value="<?php echo $role_id; ?>">
-								<input type="submit" name="submit" value="Add Role" class="btn btn-primary" style="margin-top: 24px;">
+								<input type="submit" name="submit" value="Update Role" class="btn btn-primary" style="margin-top: 24px;">
 							</div>
 						</div>
 					</form>
