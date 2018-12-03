@@ -272,3 +272,14 @@ a.read_more {
     margin-bottom: 0;
     line-height: 100%;
 }
+.usernavmenu{
+    background: #191779;
+}
+.usernavmenu ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.usernavmenu ul li a{
+
+}
