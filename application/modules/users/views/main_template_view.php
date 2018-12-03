@@ -12,6 +12,11 @@
     <link rel="stylesheet" href="<?php echo base_url('admin_assets/css/footable.bootstrap.min.css'); ?>">
     <link rel="stylesheet" href="<?php echo base_url('admin_assets/css/font-awesome.min.css'); ?>">
     <link rel="stylesheet" href="<?php echo base_url('assets/css/style.css'); ?>">
+    <script type="application/javascript" src="//code.jquery.com/jquery-3.3.1.min.js" />
+    <script type="application/javascript" src="<?php echo base_url('assets/js/bootstrap.min.js'); ?>" />
+    <script src="<?php echo base_url('admin_assets/js/footable.min.js'); ?>"></script>
+    <script src="<?php echo base_url('assets/js/jquery.validate.min.js'); ?>"></script>
+    <script src="<?php echo base_url('assets/js/additional-methods.js'); ?>"></script>
 </head>
 <body>
 <div id="header">
@@ -89,9 +94,4 @@
     </div>
 </div>
 </body>
-<script type="application/javascript" src="//code.jquery.com/jquery-3.3.1.min.js" />
-<script type="application/javascript" src="<?php echo base_url('assets/js/bootstrap.min.js'); ?>" />
-<script src="<?php echo base_url('admin_assets/js/footable.min.js'); ?>"></script>
-<script src="<?php echo base_url('assets/js/jquery.validate.min.js'); ?>"></script>
-<script src="<?php echo base_url('assets/js/additional-methods.js'); ?>"></script>
 </html>
