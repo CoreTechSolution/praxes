@@ -315,3 +315,13 @@ a.read_more {
     color: #586053;
     line-height: 150%;
 }
+#footable thead th{
+    font-size: 14px;
+    line-height: 150%;
+    padding: 6px;
+}
+#footable td{
+    font-size: 14px;
+    line-height: 150%;
+    padding: 6px;
+}
