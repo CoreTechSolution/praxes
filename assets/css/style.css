@@ -293,3 +293,18 @@ a.read_more {
 .usernavmenu ul li a:hover{
     text-decoration: none;
 }
+.user_contentainer{
+    border: 1px solid #191779;
+}
+.user_contentainer_title{
+    font-family: 'Arimo', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    color: #ffffff;
+    line-height: 150%;
+    padding: 5px 10px;
+    background: #191779;
+}
+.user_contentainer_content{
+    padding: 10px;
+}
