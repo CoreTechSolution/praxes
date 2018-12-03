@@ -18,7 +18,7 @@
     <script src="<?php echo base_url('assets/js/jquery.validate.min.js'); ?>"></script>
     <script src="<?php echo base_url('assets/js/additional-methods.js'); ?>"></script>
 </head>
-<body>
+<body class="userdashboard">
 <div id="header">
     <div class="container">
         <div class="row">

@@ -344,3 +344,6 @@ a.btn-primary-link{
     font-style: italic;
     font-weight: 400;
 }
+body.userdashboard{
+    line-height: 150%;
+}
