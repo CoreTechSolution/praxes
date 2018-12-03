@@ -2,7 +2,7 @@
 <div class="user_contentainer">
     <div class="user_contentainer_title">Edit Staff</div>
     <div class="user_contentainer_content">
-        <form id="forms" method="post" action="<?php echo base_url('users/edit_user_form'); ?>">
+        <form id="forms" method="post" action="<?php echo base_url('users/edit_user_form'); ?>" class="formclass">
     <div class="row">
         <div class="col-xl-6">
             <div class="form-group">
