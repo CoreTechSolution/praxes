@@ -330,10 +330,10 @@ a.btn-primary-link{
     font-size: 14px;
 }
 .formclass label{
-    margin-bottom: 1px;
-    line-height: 100%;
-    font-size: 15px;
-    font-weight: 600;
+    margin-bottom: 1px !important;
+    line-height: 100% !important;
+    font-size: 15px !important;
+    font-weight: 600 !important;
 }
 .wrapper1_1{
     padding: 30px 0;
