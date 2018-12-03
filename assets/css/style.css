@@ -325,3 +325,7 @@ a.read_more {
     line-height: 150%;
     padding: 6px;
 }
+.btn-primary-link{
+    color: #FFFFFF;
+    font-size: 14px;
+}

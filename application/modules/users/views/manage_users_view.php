@@ -2,7 +2,7 @@
 <div class="user_contentainer">
     <div class="user_contentainer_title">Manage Staff</div>
     <div class="user_contentainer_content">
-        <div style="text-align: right; margin-bottom: 10px;"><a href="<?php echo base_url('users/add-user'); ?>" class="btn btn-primary">Add User</a></div>
+        <div style="text-align: right; margin-bottom: 10px;"><a href="<?php echo base_url('users/add-user'); ?>" class="btn btn-primary btn-primary-link">Add User</a></div>
 	    <?php if(!empty($users)){ ?>
             <table id="footable" class="table table-bordered table-hover">
                 <thead>
