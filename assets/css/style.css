@@ -298,8 +298,8 @@ a.read_more {
 }
 .user_contentainer_title{
     font-family: 'Arimo', sans-serif;
-    font-weight: 400;
-    font-size: 18px;
+    font-weight: 600;
+    font-size: 22px;
     color: #ffffff;
     line-height: 150%;
     padding: 5px 10px;
@@ -307,4 +307,11 @@ a.read_more {
 }
 .user_contentainer_content{
     padding: 10px;
+}
+.user_contentainer_content p, .user_contentainer_content a, .user_contentainer_content li{
+    font-family: 'Arimo', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    color: #586053;
+    line-height: 150%;
 }
