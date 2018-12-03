@@ -4,7 +4,7 @@
 		<div class="col-xs-12">
 			<div class="box">
 				<div class="box-body">
-					<form id="add_company_form" method="post" action="admin/edit_company_form" class="formclass">
+					<form id="add_company_form" method="post" action="<?php echo base_url('admin/edit_company_form'); ?>" class="formclass">
 						<div class="row">
 							<div class="col-xs-10">
 								<div class="form-group">
