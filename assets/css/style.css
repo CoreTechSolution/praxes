@@ -288,3 +288,6 @@ a.read_more {
     color: #ffffff;
     line-height: 150%;
 }
+.usernavmenu ul li a:hover{
+    text-decoration: none;
+}
