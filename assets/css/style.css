@@ -345,5 +345,5 @@ a.btn-primary-link{
     font-weight: 400 !important;
 }
 body.userdashboard{
-    line-height: 150%;
+    line-height: 150% !important;
 }
