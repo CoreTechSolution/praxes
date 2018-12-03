@@ -39,7 +39,7 @@
         </div>
     </div>
 </div>
-<div class="wrapper1">
+<div class="wrapper1 wrapper1_1">
     <div class="container">
         <div class="row">
             <div class="col-xl-3">
