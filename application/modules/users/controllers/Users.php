@@ -40,8 +40,8 @@ class Users extends MY_Controller {
 	}
 	public function add_user(){
 		is_login();
-		$data['html_title'] = 'Add User';
-		$data['page_title'] = 'Add User';
+		$data['html_title'] = 'Add Staff';
+		$data['page_title'] = 'Add Staff';
 		$roles = $this->users_model->get_roles();
 		$data['roles'] = $roles;
 		$data['username'] = $this->session->userdata('username');
@@ -76,8 +76,8 @@ class Users extends MY_Controller {
 	}
 	public function edit_user(){
 		is_login();
-		$data['html_title'] = 'Edit User';
-		$data['page_title'] = 'Edit User';
+		$data['html_title'] = 'Edit Staff';
+		$data['page_title'] = 'Edit Staff';
 		$roles = $this->users_model->get_roles();
 		$data['roles'] = $roles;
 		$user_id = $this->input->get('id');
