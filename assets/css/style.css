@@ -338,3 +338,8 @@ a.btn-primary-link{
 .wrapper1_1{
     padding: 30px 0;
 }
+.formclass label.error{
+    color: red;
+    font-size: 12px;
+    font-style: italic;
+}
