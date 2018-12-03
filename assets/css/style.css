@@ -329,3 +329,9 @@ a.btn-primary-link{
     color: #FFFFFF;
     font-size: 14px;
 }
+.formclass label{
+    margin-bottom: 1px;
+    line-height: 100%;
+    font-size: 15px;
+    font-weight: 600;
+}
