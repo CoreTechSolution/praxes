@@ -328,6 +328,8 @@ a.read_more {
 a.btn-primary-link{
     color: #FFFFFF;
     font-size: 14px;
+    background-color: #191779;
+    border-color: #191779;
 }
 .formclass label{
     margin-bottom: 1px !important;
@@ -346,4 +348,8 @@ a.btn-primary-link{
 }
 body.userdashboard{
     line-height: 150% !important;
+}
+.btn-primary{
+    background-color: #191779;
+    border-color: #191779;
 }
