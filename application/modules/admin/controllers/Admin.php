@@ -140,6 +140,19 @@ class Admin extends MY_Controller {
 		$this->admin_model->delete_company($company_id);
 		redirect('admin/companies');
 	}
+	public function edit_company(){
+		is_login();
+		$company_id = $this->input->get('id');
+		$company_name = get_company_name_by_id($company_id);
+		$data['html_title'] = 'Edit Company';
+		$data['page_title'] = 'Edit Company';
+		$data['company_name'] = $company_name;
+		$data['content_view'] = 'admin/edit_company_view';
+		$this->load->view('admin/main_template_view', $data);
+	}
+	public function edit_company_form(){
+
+	}
 	public function manage_users(){
 		is_login();
 		$data['html_title'] = 'Manage Users';

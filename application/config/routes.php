@@ -62,6 +62,7 @@ $route['admin/add-role'] = 'admin/add_role';
 $route['admin/delete-role'] = 'admin/delete_role';
 $route['admin/add-company'] = 'admin/add_company';
 $route['admin/delete-company'] = 'admin/delete_company';
+$route['admin/edit-company'] = 'admin/edit_company';
 $route['admin/manage-users'] = 'admin/manage_users';
 $route['admin/add-user'] = 'admin/add_user';
 $route['admin/delete-user'] = 'admin/delete_user';

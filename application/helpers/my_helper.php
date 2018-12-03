@@ -112,3 +112,14 @@ function get_role_name_by_id($role_id){
 		}
 	}
 }
+function get_company_name_by_id($company_id){
+	$CI = & get_instance();
+	$CI->db->select('*');
+	$CI->db->from('companies');
+	$CI->db->where('company_id', $company_id);
+	if($query = $CI->db->get()){
+		foreach ($query->result() as $row){
+			return $row->company_name;
+		}
+	}
+}
