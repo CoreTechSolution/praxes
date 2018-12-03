@@ -284,7 +284,7 @@ a.read_more {
     display: block;
     font-family: 'Arimo', sans-serif;
     font-weight: 400;
-    font-size: 18px;
+    font-size: 16px;
     color: #ffffff;
     line-height: 150%;
     padding: 5px;
@@ -299,7 +299,7 @@ a.read_more {
 .user_contentainer_title{
     font-family: 'Arimo', sans-serif;
     font-weight: 600;
-    font-size: 22px;
+    font-size: 20px;
     color: #ffffff;
     line-height: 150%;
     padding: 5px 10px;
@@ -311,7 +311,7 @@ a.read_more {
 .user_contentainer_content p, .user_contentainer_content a, .user_contentainer_content li{
     font-family: 'Arimo', sans-serif;
     font-weight: 400;
-    font-size: 18px;
+    font-size: 16px;
     color: #586053;
     line-height: 150%;
 }

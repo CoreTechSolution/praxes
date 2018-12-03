@@ -47,6 +47,7 @@
                     <ul>
                         <li><a href="<?php echo base_url('users/dashboard'); ?>">Dashboard</a></li>
                         <li><a href="<?php echo base_url('users/manage-staff'); ?>">Manage Staff</a></li>
+                        <li><a href="<?php echo base_url('users/logout'); ?>">Logout</a></li>
                     </ul>
                 </div>
             </div>
