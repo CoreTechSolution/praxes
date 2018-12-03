@@ -299,7 +299,7 @@ a.read_more {
 .user_contentainer_title{
     font-family: 'Arimo', sans-serif;
     font-weight: 600;
-    font-size: 20px;
+    font-size: 17px;
     color: #ffffff;
     line-height: 150%;
     padding: 5px 10px;
@@ -325,7 +325,7 @@ a.read_more {
     line-height: 150%;
     padding: 6px;
 }
-.btn-primary-link{
+a.btn-primary-link{
     color: #FFFFFF;
     font-size: 14px;
 }
