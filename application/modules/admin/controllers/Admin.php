@@ -147,11 +147,19 @@ class Admin extends MY_Controller {
 		$data['html_title'] = 'Edit Company';
 		$data['page_title'] = 'Edit Company';
 		$data['company_name'] = $company_name;
+		$data['company_id'] = $company_id;
 		$data['content_view'] = 'admin/edit_company_view';
 		$this->load->view('admin/main_template_view', $data);
 	}
 	public function edit_company_form(){
-
+		is_login();
+		if($this->input->post('submit')){
+			$company_id = $this->input->post('company_id');
+			$company_name = $this->input->post('company_name');
+			$company_slug = slugify($company_name);
+			$this->admin_model->update_company($company_id, $company_name, $company_slug);
+			redirect(base_url('admin/companies'));
+		}
 	}
 	public function manage_users(){
 		is_login();

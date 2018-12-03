@@ -13,7 +13,8 @@
 								</div>
 							</div>
 							<div class="col-xs-2">
-								<input type="submit" name="submit" value="Add Company" class="btn btn-primary" style="margin-top: 24px;">
+                                <input type="hidden" name="company_id" value="<?php echo $company_id; ?>">
+								<input type="submit" name="submit" value="Update" class="btn btn-primary" style="margin-top: 24px;">
 							</div>
 						</div>
 					</form>

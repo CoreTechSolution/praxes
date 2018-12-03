@@ -76,6 +76,15 @@ class Admin_model extends MY_Model {
 		$this->db->where('company_id', $company_id);
 		$this->db->delete('companies');
 	}
+	function update_company($company_id, $company_name, $company_slug){
+		$data = array(
+			'company_name'        => $company_name,
+			'company_slug'         => $company_slug,
+		);
+
+		$this->db->where('company_id', $company_id);
+		$this->db->update('companies', $data);
+	}
 	function add_user($username, $email_address, $password, $first_name, $last_name, $phone, $license_numbers, $npi_number, $street_address, $city, $state, $zip_code, $user_role, $company_id){
 		$this->db->select('company_name');
 		$this->db->from('companies');
