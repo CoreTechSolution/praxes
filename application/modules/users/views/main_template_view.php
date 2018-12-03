@@ -39,17 +39,21 @@
         </div>
     </div>
 </div>
-<div class="row">
-    <div class="col-xl-3">
-        <div class="usernavmenu">
-            <ul>
-                <li><a href="<?php echo base_url('users/dashboard'); ?>"><i class="fa fa-dashboard"></i> Dashboard</a></li>
-                <li><a href="<?php echo base_url('users/manage-staff'); ?>"><i class="fa fa-users"></i> Manage Staff</a></li>
-            </ul>
+<div class="wrapper1">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-3">
+                <div class="usernavmenu">
+                    <ul>
+                        <li><a href="<?php echo base_url('users/dashboard'); ?>"><i class="fa fa-dashboard"></i> Dashboard</a></li>
+                        <li><a href="<?php echo base_url('users/manage-staff'); ?>"><i class="fa fa-users"></i> Manage Staff</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-xl-9">
+			    <?php $this->load->view($content_view); ?>
+            </div>
         </div>
-    </div>
-    <div class="col-xl-9">
-	    <?php $this->load->view($content_view); ?>
     </div>
 </div>
 <div id="footer">
